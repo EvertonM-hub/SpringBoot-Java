@@ -37,4 +37,11 @@ import java.util.Optional; // Optional em java é classe de container genérico 
 		 public Optional<Produto> findById(Long id) { // consulta por ID
 			 return produtoRepository.findById(id);
 		 }
+		 
+		 public List<Produto> salvarLista(List<Produto> produtos) { //salva a lista de produtos
+			 return produtoRepository.saveAll(produtos);
+			 }
+
+		
+
 		}

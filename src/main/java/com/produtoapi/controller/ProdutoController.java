@@ -39,4 +39,11 @@ public class ProdutoController {
 	 public Optional<Produto> findById(@PathVariable Long id) {
 		 	return produtoService.findById(id);
 	 }
+	 
+	 @PostMapping("/salvarLista") // recebe uma lista de produtos e salva de uma vez
+	 public List<Produto> salvarLista(@RequestBody List<Produto>
+	produtos) {
+	 return produtoService.salvarLista(produtos);
+	 }
+
 }
