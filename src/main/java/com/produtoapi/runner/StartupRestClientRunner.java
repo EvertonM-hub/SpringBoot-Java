@@ -1,0 +1,30 @@
+package com.produtoapi.runner;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
+
+import com.produtoapi.model.Produto;
+
+import java.util.Arrays;
+import java.util.List;
+
+@Component
+public class StartupRestClientRunner implements CommandLineRunner {  //faz com que o spring gerencie o BD e atualize automaticamente.
+	
+		 @Override
+		 public void run(String... args) throws Exception {
+		 System.out.println("RestClient sendo executado");
+		 
+		 RestTemplate restTemplate = new RestTemplate();
+		 String url = "http://localhost:8080/produtos"; // URL da suaAPI
+		 
+		 Produto[] produtosArray = restTemplate.getForObject(url,
+		Produto[].class);
+		 List<Produto> produtos = Arrays.asList(produtosArray);
+		 
+		 	produtos.forEach(produto -> System.out.println("ID:" +
+		produto.getId() + " " + produto.getNome() + ": " +
+		produto.getPreco())); 
+		 }
+		}
