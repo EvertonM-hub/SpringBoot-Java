@@ -22,13 +22,9 @@ Este é um projeto desenvolvido com **Spring Boot 3.5.3**, com foco em criar uma
 
 ### 1. Clone o repositório
 
-```
-bash
-<p>git clone https://github.com/EvertonM-hub/meu-projeto-springboot.git</p>
+```bash
+git clone https://github.com/EvertonM-hub/meu-projeto-springboot.git
 cd meu-projeto-springboot
-<br>
-<br>
-
 
 
 
@@ -46,11 +42,6 @@ PUT /produtos/{id} – Atualiza um produto pelo ID
 
 DELETE /produtos/{id} – Remove um produto pelo ID
 
-
-👨‍💻 Autor
-Desenvolvido por Everton Moreira
-🔗 github.com/EvertonM-hub
-
-
+POST / salvarLista - Salva uma lista de podutos
 
 
